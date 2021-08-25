@@ -323,7 +323,7 @@ __global__ void Trace(double* src, double* dst, double angle, double dist, unsig
 
 int main(){
     //Prepare B field texture
-    printf("hello!%d\n",1);
+
     FILE* bf = fopen("./bmap.bin", "rb");
     double* bfield = (double*)(malloc(302*83*302*3*sizeof(double)));
     fread(bfield,sizeof(double)*3, 302*83*302,bf);
@@ -331,7 +331,7 @@ int main(){
     free(bfield);
     fclose(bf);
 
-    printf("hello!%d\n",2);
+
     //Prepare Input Data
     FILE* fin = fopen("input.bin", "rb");
     double* input;
